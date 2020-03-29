@@ -19,30 +19,3 @@ routes.post('/incidents', incidentController.create);
 routes.delete('/incidents/:id', incidentController.delete);
 
 module.exports = routes;
-
-/**
-    * Tipos de Parâmetros
-    *
-    * Query Params: Parâmetros nomeados enviados na rota após o "?" (filtros, paginação)
-    * Route Params: Parâmetros utilizados para identificar recursos
-    * Request Body: Corpo da requisição, utilizada para criar ou alterar recursos
-
-        * Query Params
-        * http://localhost:3333/users?nome=filipe&idade=24
-        *
-            const params = request.query;
-            console.log(params);
-
-        * Route Params
-        * http://localhost:3333/users/1
-        *
-            const params = request.params;
-            console.log(params);
-
-        * Request Body
-        * http://localhost:3333/users
-        * app.use(express.json());
-
-            const body = request.body;
-            console.log(body);
-    */
